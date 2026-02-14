@@ -42,6 +42,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* ✅ LEFT SECTION FIX */
     .left-section {
       padding: 50px 35px;
       display: flex;
@@ -49,6 +50,8 @@
       align-items: center;
       text-align: center;
       border-right: 1px solid #e0e0e0;
+
+      width: 100%; /* ✅ empêche le décalage mobile */
     }
 
     .logo {
@@ -70,13 +73,15 @@
       margin-bottom: 15px;
     }
 
-    /* ✅ CORRECTION : 3 icônes par ligne */
+    /* ✅ SOCIAL ICONS PERFECT CENTER */
     .social-links {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 15px;
-      justify-items: center;
       margin-top: 30px;
+
+      width: 100%;         /* ✅ pleine largeur */
+      place-items: center; /* ✅ centre parfaitement */
     }
 
     .social-links a {
@@ -176,9 +181,21 @@
       box-shadow: 0 6px 20px rgba(46, 139, 87, 0.4);
     }
 
+    /* ✅ Responsive */
     @media(max-width:768px){
-      .card { grid-template-columns: 1fr; }
+      .card {
+        grid-template-columns: 1fr;
+      }
+
+      .right-section {
+        padding: 35px 25px;
+      }
+
+      .left-section {
+        padding: 35px 25px;
+      }
     }
+
   </style>
 </head>
 
@@ -196,7 +213,7 @@
     <!-- SOCIAL LINKS -->
     <div class="social-links">
 
-      <a href="https://www.instagram.com/allianceammelne?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+      <a href="https://www.instagram.com/allianceammelne" target="_blank">
         <i class="fa-brands fa-instagram"></i>
       </a>
 
@@ -212,7 +229,7 @@
         <i class="fa-brands fa-linkedin-in"></i>
       </a>
 
-      <a href="https://youtube.com/@aceammeln?si=iKdRsBzV8qzev60J" target="_blank">
+      <a href="https://youtube.com/@aceammeln" target="_blank">
         <i class="fa-brands fa-youtube"></i>
       </a>
 
@@ -263,7 +280,6 @@
       </div>
     </div>
 
-    <!-- BUTTON -->
     <a href="https://allianceammelne.org/" target="_blank" class="btn">
       <i class="fa-solid fa-arrow-up-right-from-square"></i>
       Visiter le site officiel
@@ -275,4 +291,3 @@
 
 </body>
 </html>
-
